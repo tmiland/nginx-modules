@@ -394,19 +394,36 @@ def write_catalog(modules: dict[str, dict[str, object]],
         "`bash scripts/build_bundle.sh --bundle <name>`. `legacy` or "
         "`candidate` modules are only included when explicitly selected.",
         "",
+        "## Updating",
+        "",
+        "`bash scripts/update-modules.sh --check` compares pinned refs and "
+        "archive versions with upstream and exits non-zero on drift. It is "
+        "read-only: update the `.mod` file, run "
+        "`python3 scripts/build_catalog.py`, then rebuild/test the bundle.",
+        "",
         "## Modules",
         "",
-        "| Module | Version | Env | Kind | Status | Bundle directory | Requires | License |",
-        "|---|---|---|---|---|---|---|---|",
+        "| Module | Upstream | Version | Env | Kind | Status | Bundle directory | Requires | License |",
+        "|---|---|---|---|---|---|---|---|---|",
     ]
 
     for module_id in sorted(modules):
         data = modules[module_id]
         requires = ", ".join(f"`{md(dep)}`" for dep in data["requires"]) or "-"
+        repo = data.get("repo") or ""
+        url = data.get("url") or ""
+        if repo:
+            link = repo if repo.startswith("http") else f"https://github.com/{repo}"
+            upstream = f"[`{md(repo)}`]({link})"
+        elif url:
+            upstream = f"[source]({url})"
+        else:
+            upstream = "-"
         lines.append(
-            "| `{id}` | `{version}` | `{env}` | `{kind}` | `{status}` | "
+            "| `{id}` | {upstream} | `{version}` | `{env}` | `{kind}` | `{status}` | "
             "`{dir}` | {requires} | `{license}` |".format(
                 id=md(module_id),
+                upstream=upstream,
                 version=md(data["version"]),
                 env=md(data["env"]) or "-",
                 kind=md(data["kind"]),
