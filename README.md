@@ -48,24 +48,24 @@ The `full` bundle contains every `active` module. Named bundles are available fo
 |---|---|---|---|---|---|---|---|---|
 | `brotli` | [`google/ngx_brotli`](https://github.com/google/ngx_brotli) | `25f86f0` | `BROTLI` | `git` | `active` | `ngx_brotli` | - | `BSD-2-Clause` |
 | `cachepurge` | [`FRiCKLE/ngx_cache_purge`](https://github.com/FRiCKLE/ngx_cache_purge) | `331fe43` | `CACHEPURGE` | `git` | `active` | `ngx_cache_purge` | - | `BSD-2-Clause` |
-| `echo` | [`openresty/echo-nginx-module`](https://github.com/openresty/echo-nginx-module) | `0.63` | `NGXECHO` | `archive` | `active` | `echo-nginx-module-0.63` | - | `BSD-2-Clause` |
+| `echo` | [`openresty/echo-nginx-module`](https://github.com/openresty/echo-nginx-module) | `0.66` | `NGXECHO` | `archive` | `active` | `echo-nginx-module-0.66` | - | `BSD-2-Clause` |
 | `fancyindex` | [`aperezdc/ngx-fancyindex`](https://github.com/aperezdc/ngx-fancyindex) | `70311f2` | `FANCYINDEX` | `git` | `active` | `fancyindex` | - | `BSD-2-Clause` |
 | `geoip2` | [`leev/ngx_http_geoip2_module`](https://github.com/leev/ngx_http_geoip2_module) | `3.4` | `GEOIP` | `archive` | `active` | `ngx_http_geoip2_module-3.4` | `libmaxminddb` | `BSD-2-Clause` |
-| `headers-more` | [`openresty/headers-more-nginx-module`](https://github.com/openresty/headers-more-nginx-module) | `0.39` | `HEADERMOD` | `archive` | `active` | `headers-more-nginx-module-0.39` | - | `BSD-2-Clause` |
+| `headers-more` | [`openresty/headers-more-nginx-module`](https://github.com/openresty/headers-more-nginx-module) | `0.42` | `HEADERMOD` | `archive` | `active` | `headers-more-nginx-module-0.42` | - | `BSD-2-Clause` |
 | `hpack` | [`hakasenyang/openssl-patch`](https://github.com/hakasenyang/openssl-patch) | `nginx_hpack_push_1.15.3` | `HPACK` | `file` | `active` | `patches/hpack.patch` | - | `NOASSERTION` |
 | `hpack-http3` | [`angristan/nginx-autoinstall`](https://github.com/angristan/nginx-autoinstall) | `nginx_hpack_push_with_http3` | `HPACK` | `file` | `active` | `patches/hpack-http3.patch` | - | `NOASSERTION` |
 | `http3` | [`angristan/nginx-autoinstall`](https://github.com/angristan/nginx-autoinstall) | `nginx-1.19.7` | `HTTP3` | `file` | `active` | `patches/http3.patch` | - | `NOASSERTION` |
 | `httpredis` | [`osokin/ngx_http_redis`](https://github.com/osokin/ngx_http_redis) | `0.4.2-build5` | `HTTPREDIS` | `archive` | `active` | `ngx_http_redis-0.4.2-build5` | - | `BSD-2-Clause` |
 | `libmaxminddb` | [`maxmind/libmaxminddb`](https://github.com/maxmind/libmaxminddb) | `1.14.1` | `GEOIP` | `archive` | `active` | `libmaxminddb-1.14.1` | - | `Apache-2.0` |
-| `libressl` | [`libressl/portable`](https://github.com/libressl/portable) | `4.1.0` | `LIBRESSL` | `archive` | `active` | `libressl-4.1.0` | - | `ISC AND OpenSSL` |
-| `lua-nginx` | [`openresty/lua-nginx-module`](https://github.com/openresty/lua-nginx-module) | `0.10.28` | `LUA` | `archive` | `active` | `lua-nginx-module-0.10.28` | `luajit2`, `ngx-devel-kit` | `BSD-2-Clause` |
-| `lua-resty-core` | [`openresty/lua-resty-core`](https://github.com/openresty/lua-resty-core) | `0.1.31` | `LUA` | `archive` | `active` | `lua-resty-core-0.1.31` | - | `BSD-2-Clause` |
+| `libressl` | [`libressl/portable`](https://github.com/libressl/portable) | `4.4.1` | `LIBRESSL` | `archive` | `active` | `libressl-4.4.1` | - | `ISC AND OpenSSL` |
+| `lua-nginx` | [`openresty/lua-nginx-module`](https://github.com/openresty/lua-nginx-module) | `0.10.31` | `LUA` | `archive` | `active` | `lua-nginx-module-0.10.31` | `luajit2`, `ngx-devel-kit` | `BSD-2-Clause` |
+| `lua-resty-core` | [`openresty/lua-resty-core`](https://github.com/openresty/lua-resty-core) | `0.1.32` | `LUA` | `archive` | `active` | `lua-resty-core-0.1.32` | - | `BSD-2-Clause` |
 | `lua-resty-lrucache` | [`openresty/lua-resty-lrucache`](https://github.com/openresty/lua-resty-lrucache) | `0.15` | `LUA` | `archive` | `active` | `lua-resty-lrucache-0.15` | - | `BSD-2-Clause` |
-| `luajit2` | [`openresty/luajit2`](https://github.com/openresty/luajit2) | `2.1-20250826` | `LUA` | `archive` | `active` | `luajit2-2.1-20250826` | - | `MIT` |
+| `luajit2` | [`openresty/luajit2`](https://github.com/openresty/luajit2) | `2.1-20261117` | `LUA` | `archive` | `active` | `luajit2-2.1-20261117` | - | `MIT` |
 | `modsecurity` | [`SpiderLabs/ModSecurity`](https://github.com/SpiderLabs/ModSecurity) | `475aece` | `MODSEC` | `git` | `active` | `ModSecurity` | - | `Apache-2.0` |
 | `modsecurity-nginx` | [`SpiderLabs/ModSecurity-nginx`](https://github.com/SpiderLabs/ModSecurity-nginx) | `30a4747` | `MODSEC` | `git` | `active` | `ModSecurity-nginx` | `modsecurity` | `Apache-2.0` |
 | `ngx-devel-kit` | [`simplresty/ngx_devel_kit`](https://github.com/simplresty/ngx_devel_kit) | `0.3.4` | `LUA` | `archive` | `active` | `ngx_devel_kit-0.3.4` | - | `BSD-2-Clause` |
-| `openssl` | [`openssl/openssl`](https://github.com/openssl/openssl) | `3.5.1` | `OPENSSL` | `archive` | `active` | `openssl-3.5.1` | - | `Apache-2.0` |
+| `openssl` | [`openssl/openssl`](https://github.com/openssl/openssl) | `3.5.9` | `OPENSSL` | `archive` | `active` | `openssl-3.5.9` | - | `Apache-2.0` |
 | `pagespeed` | [`pagespeed/ngx_pagespeed`](https://github.com/pagespeed/ngx_pagespeed) | `1.13.35.2` | `PAGESPEED` | `zip` | `legacy` | `incubator-pagespeed-ngx-1.13.35.2-stable` | - | `Apache-2.0` |
 | `quiche` | [`cloudflare/quiche`](https://github.com/cloudflare/quiche) | `d448b6b` | `HTTP3` | `git` | `active` | `quiche` | - | `BSD-2-Clause` |
 | `redis2` | [`openresty/redis2-nginx-module`](https://github.com/openresty/redis2-nginx-module) | `0e7f942` | `REDIS2` | `git` | `active` | `redis2-nginx-module` | - | `BSD-2-Clause` |

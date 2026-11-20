@@ -27,7 +27,7 @@ REPO_SLUG = "tmiland/nginx-modules"
 
 MODULE_KEYS = [
     "id", "env", "kind", "dir", "versioned_dir", "version_var", "version",
-    "repo", "url", "strip", "sha256", "ref", "submodules", "build",
+    "repo", "homepage", "url", "strip", "sha256", "ref", "submodules", "build",
     "requires", "license", "status",
 ]
 BUNDLE_KEYS = ["id", "name", "description", "modules"]
@@ -411,10 +411,17 @@ def write_catalog(modules: dict[str, dict[str, object]],
         data = modules[module_id]
         requires = ", ".join(f"`{md(dep)}`" for dep in data["requires"]) or "-"
         repo = data.get("repo") or ""
+        homepage = data.get("homepage") or ""
         url = data.get("url") or ""
         if repo:
             link = repo if repo.startswith("http") else f"https://github.com/{repo}"
             upstream = f"[`{md(repo)}`]({link})"
+        elif homepage:
+            if homepage.startswith("https://github.com/"):
+                label = homepage.removeprefix("https://github.com/").rstrip("/")
+                upstream = f"[`{md(label)}`]({homepage})"
+            else:
+                upstream = f"[homepage]({homepage})"
         elif url:
             upstream = f"[source]({url})"
         else:

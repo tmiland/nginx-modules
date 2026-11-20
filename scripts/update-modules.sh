@@ -151,14 +151,22 @@ check_archive() {
     return
   fi
 
-  if [[ $(normalize_version "$latest") != $(normalize_version "$version") ]]; then
-    printf 'DRIFT  %-22s pinned %s, latest release %s\n' "$id" "$version" "$latest"
-    DRIFT=$((DRIFT + 1))
+  local latest_norm version_norm
+  latest_norm=$(normalize_version "$latest")
+  version_norm=$(normalize_version "$version")
+  if [[ $latest_norm == "$version_norm" ]]; then
+    printf 'OK     %-22s latest release %s\n' "$id" "$latest"
+    OK=$((OK + 1))
+    return
+  fi
+  if [[ $(printf '%s\n%s\n' "$latest_norm" "$version_norm" | sort -V | tail -n 1) == "$version_norm" ]]; then
+    printf 'OK     %-22s pinned %s is newer than latest release %s\n' "$id" "$version" "$latest"
+    OK=$((OK + 1))
     return
   fi
 
-  printf 'OK     %-22s latest release %s\n' "$id" "$latest"
-  OK=$((OK + 1))
+  printf 'DRIFT  %-22s pinned %s, latest release %s\n' "$id" "$version" "$latest"
+  DRIFT=$((DRIFT + 1))
 }
 
 while IFS= read -r file; do
