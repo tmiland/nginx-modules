@@ -75,7 +75,7 @@ The `full` bundle contains every `active` module. Named bundles are available fo
 | `srcache` | [`openresty/srcache-nginx-module`](https://github.com/openresty/srcache-nginx-module) | `3febcaa` | `SRCACHE` | `git` | `active` | `srcache-nginx-module` | - | `BSD-2-Clause` |
 | `subfilter` | [`yaoweibin/ngx_http_substitutions_filter_module`](https://github.com/yaoweibin/ngx_http_substitutions_filter_module) | `e12e965` | `SUBFILTER` | `git` | `active` | `ngx_http_substitutions_filter_module` | - | `BSD-2-Clause` |
 | `testcookie` | [`kyprizel/testcookie-nginx-module`](https://github.com/kyprizel/testcookie-nginx-module) | `de7ca88` | `TESTCOOKIE` | `git` | `active` | `testcookie-nginx-module` | - | `BSD-2-Clause` |
-| `tlsdyn` | [`nginx-modules/ngx_http_tls_dyn_size`](https://github.com/nginx-modules/ngx_http_tls_dyn_size) | `afb5079` | `TLSDYN` | `file` | `active` | `patches/tlsdyn.patch` | - | `NOASSERTION` |
+| `tlsdyn` | [`nginx-modules/ngx_http_tls_dyn_size`](https://github.com/nginx-modules/ngx_http_tls_dyn_size) | `1.29.2+` | `TLSDYN` | `file` | `active` | `patches/tlsdyn.patch` | - | `NOASSERTION` |
 | `vts` | [`vozlt/nginx-module-vts`](https://github.com/vozlt/nginx-module-vts) | `3b92358` | `VTS` | `git` | `active` | `nginx-module-vts` | - | `BSD-2-Clause` |
 | `webdav` | [`arut/nginx-dav-ext-module`](https://github.com/arut/nginx-dav-ext-module) | `f5e3088` | `WEBDAV` | `git` | `active` | `nginx-dav-ext-module` | - | `BSD-2-Clause` |
 | `zstd` | [`tokers/zstd-nginx-module`](https://github.com/tokers/zstd-nginx-module) | `0.1.1` | `ZSTD` | `archive` | `active` | `zstd-nginx-module` | - | `BSD-2-Clause` |
@@ -88,7 +88,7 @@ Bundle files themselves list only directly selected modules.
 | Bundle | Name | Description | Resolved modules |
 |---|---|---|---|
 | `core` | [Core](bundles/core.bundle) | Common HTTP performance and content-filtering modules. | `brotli`, `headers-more`, `fancyindex`, `cachepurge`, `subfilter` |
-| `http3` | [HTTP/3](bundles/http3.bundle) | quiche with the TLS dynamic-record, HTTP/3, and HPACK patches. | `quiche`, `tlsdyn`, `http3`, `hpack-http3` |
+| `http3` | [HTTP/3](bundles/http3.bundle) | Legacy HTTP/3 stack for nginx <= 1.24; nginx 1.25+ has native HTTP/3 (--with-http_v3_module, included in the full profile). | `quiche`, `tlsdyn`, `http3`, `hpack-http3` |
 | `legacy` | [Legacy](bundles/legacy.bundle) | Unmaintained PageSpeed module sources. The PSOL binary is not bundled. | `pagespeed` |
 | `lua` | [Lua](bundles/lua.bundle) | LuaJIT, ngx_devel_kit, lua-nginx-module, the OpenResty Lua libraries, and set-misc. | `luajit2`, `ngx-devel-kit`, `lua-nginx`, `lua-resty-core`, `lua-resty-lrucache`, `set-misc` |
 | `media` | [Media](bundles/media.bundle) | nginx-rtmp-module for RTMP streaming. | `rtmp` |

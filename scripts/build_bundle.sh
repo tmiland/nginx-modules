@@ -371,8 +371,10 @@ done
 
 all_ids=
 for id in "${ORDER[@]}"; do
+  # The third-party HTTP/3 stack targets nginx <= 1.24. nginx 1.25+ has
+  # native HTTP/3 (--with-http_v3_module), so keep it out of "all".
   case $id in
-    openssl|libressl|hpack|pagespeed) continue ;;
+    openssl|libressl|hpack|pagespeed|quiche|http3|hpack-http3) continue ;;
   esac
   all_ids=${all_ids:+$all_ids,}$id
 done

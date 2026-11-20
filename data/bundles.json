@@ -21,7 +21,7 @@
   {
     "id": "http3",
     "name": "HTTP/3",
-    "description": "quiche with the TLS dynamic-record, HTTP/3, and HPACK patches.",
+    "description": "Legacy HTTP/3 stack for nginx <= 1.24; nginx 1.25+ has native HTTP/3 (--with-http_v3_module, included in the full profile).",
     "modules": [
       "quiche",
       "tlsdyn",
