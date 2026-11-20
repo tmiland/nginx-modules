@@ -60,7 +60,7 @@ The `full` bundle contains every `active` module. Named bundles are available fo
 | `libmaxminddb` | [`maxmind/libmaxminddb`](https://github.com/maxmind/libmaxminddb) | `1.14.1` | `GEOIP` | `archive` | `active` | `libmaxminddb-1.14.1` | - | `Apache-2.0` |
 | `libressl` | [`libressl/portable`](https://github.com/libressl/portable) | `4.4.1` | `LIBRESSL` | `archive` | `active` | `libressl-4.4.1` | - | `ISC AND OpenSSL` |
 | `lua-nginx` | [`openresty/lua-nginx-module`](https://github.com/openresty/lua-nginx-module) | `0.10.31` | `LUA` | `archive` | `active` | `lua-nginx-module-0.10.31` | `luajit2`, `ngx-devel-kit` | `BSD-2-Clause` |
-| `lua-resty-core` | [`openresty/lua-resty-core`](https://github.com/openresty/lua-resty-core) | `0.1.32` | `LUA` | `archive` | `active` | `lua-resty-core-0.1.32` | - | `BSD-2-Clause` |
+| `lua-resty-core` | [`openresty/lua-resty-core`](https://github.com/openresty/lua-resty-core) | `0.1.34rc3` | `LUA` | `archive` | `active` | `lua-resty-core-0.1.34rc3` | - | `BSD-2-Clause` |
 | `lua-resty-lrucache` | [`openresty/lua-resty-lrucache`](https://github.com/openresty/lua-resty-lrucache) | `0.15` | `LUA` | `archive` | `active` | `lua-resty-lrucache-0.15` | - | `BSD-2-Clause` |
 | `luajit2` | [`openresty/luajit2`](https://github.com/openresty/luajit2) | `2.1-20261117` | `LUA` | `archive` | `active` | `luajit2-2.1-20261117` | - | `MIT` |
 | `modsecurity` | [`SpiderLabs/ModSecurity`](https://github.com/SpiderLabs/ModSecurity) | `475aece` | `MODSEC` | `git` | `active` | `ModSecurity` | - | `Apache-2.0` |
