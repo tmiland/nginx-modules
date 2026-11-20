@@ -55,7 +55,7 @@ The `full` bundle contains every `active` module. Named bundles are available fo
 | `hpack` | [`hakasenyang/openssl-patch`](https://github.com/hakasenyang/openssl-patch) | `nginx_hpack_push_1.15.3` | `HPACK` | `file` | `active` | `patches/hpack.patch` | - | `NOASSERTION` |
 | `hpack-http3` | [`angristan/nginx-autoinstall`](https://github.com/angristan/nginx-autoinstall) | `nginx_hpack_push_with_http3` | `HPACK` | `file` | `active` | `patches/hpack-http3.patch` | - | `NOASSERTION` |
 | `http3` | [`angristan/nginx-autoinstall`](https://github.com/angristan/nginx-autoinstall) | `nginx-1.19.7` | `HTTP3` | `file` | `active` | `patches/http3.patch` | - | `NOASSERTION` |
-| `httpredis` | [source](https://people.freebsd.org/~osa/ngx_http_redis-0.3.9.tar.gz) | `0.3.9` | `HTTPREDIS` | `archive` | `active` | `ngx_http_redis-0.3.9` | - | `BSD-2-Clause` |
+| `httpredis` | [`osokin/ngx_http_redis`](https://github.com/osokin/ngx_http_redis) | `0.3.9` | `HTTPREDIS` | `archive` | `active` | `ngx_http_redis-0.3.9` | - | `BSD-2-Clause` |
 | `libmaxminddb` | [`maxmind/libmaxminddb`](https://github.com/maxmind/libmaxminddb) | `1.14.1` | `GEOIP` | `archive` | `active` | `libmaxminddb-1.14.1` | - | `Apache-2.0` |
 | `libressl` | [`libressl/portable`](https://github.com/libressl/portable) | `4.1.0` | `LIBRESSL` | `archive` | `active` | `libressl-4.1.0` | - | `ISC AND OpenSSL` |
 | `lua-nginx` | [`openresty/lua-nginx-module`](https://github.com/openresty/lua-nginx-module) | `0.10.28` | `LUA` | `archive` | `active` | `lua-nginx-module-0.10.28` | `luajit2`, `ngx-devel-kit` | `BSD-2-Clause` |
