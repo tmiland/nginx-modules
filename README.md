@@ -38,6 +38,10 @@ done < modules.conf
 
 The `full` bundle contains every `active` module. Named bundles are available for smaller source sets; build one with `bash scripts/build_bundle.sh --bundle <name>`. `legacy` or `candidate` modules are only included when explicitly selected.
 
+## Updating
+
+`bash scripts/update-modules.sh --check` compares pinned refs and archive versions with upstream and exits non-zero on drift. It is read-only: update the `.mod` file, run `python3 scripts/build_catalog.py`, then rebuild/test the bundle.
+
 ## Modules
 
 | Module | Version | Env | Kind | Status | Bundle directory | Requires | License |
