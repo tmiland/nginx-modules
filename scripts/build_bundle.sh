@@ -369,6 +369,15 @@ done
   done
 } > "$DEST_ROOT/bundles.conf"
 
+all_ids=
+for id in "${ORDER[@]}"; do
+  case $id in
+    openssl|libressl|hpack|pagespeed) continue ;;
+  esac
+  all_ids=${all_ids:+$all_ids,}$id
+done
+printf 'all|%s\n' "$all_ids" >> "$DEST_ROOT/bundles.conf"
+
 ARCHIVE=$OUT_DIR/nginx-modules-$BUNDLE.tar.gz
 TMP_ARCHIVE=$WORK/nginx-modules-$BUNDLE.tar.gz
 tar --sort=name --mtime='@0' --owner=0 --group=0 --numeric-owner \

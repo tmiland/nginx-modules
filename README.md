@@ -88,7 +88,7 @@ Bundle files themselves list only directly selected modules.
 | Bundle | Name | Description | Resolved modules |
 |---|---|---|---|
 | `core` | [Core](bundles/core.bundle) | Common HTTP performance and content-filtering modules. | `brotli`, `headers-more`, `fancyindex`, `cachepurge`, `subfilter` |
-| `http3` | [HTTP/3](bundles/http3.bundle) | quiche with the TLS dynamic-record, HTTP/3, and HPACK patches. | `quiche`, `tlsdyn`, `http3`, `hpack`, `hpack-http3` |
+| `http3` | [HTTP/3](bundles/http3.bundle) | quiche with the TLS dynamic-record, HTTP/3, and HPACK patches. | `quiche`, `tlsdyn`, `http3`, `hpack-http3` |
 | `legacy` | [Legacy](bundles/legacy.bundle) | Unmaintained PageSpeed module sources. The PSOL binary is not bundled. | `pagespeed` |
 | `lua` | [Lua](bundles/lua.bundle) | LuaJIT, ngx_devel_kit, lua-nginx-module, the OpenResty Lua libraries, and set-misc. | `luajit2`, `ngx-devel-kit`, `lua-nginx`, `lua-resty-core`, `lua-resty-lrucache`, `set-misc` |
 | `media` | [Media](bundles/media.bundle) | nginx-rtmp-module for RTMP streaming. | `rtmp` |

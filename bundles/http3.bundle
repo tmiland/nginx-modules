@@ -1,4 +1,4 @@
 id = 'http3'
 name = 'HTTP/3'
 description = 'quiche with the TLS dynamic-record, HTTP/3, and HPACK patches.'
-modules = 'quiche, tlsdyn, http3, hpack, hpack-http3'
+modules = 'quiche, tlsdyn, http3, hpack-http3'

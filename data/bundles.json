@@ -26,14 +26,12 @@
       "quiche",
       "tlsdyn",
       "http3",
-      "hpack",
       "hpack-http3"
     ],
     "resolved": [
       "quiche",
       "tlsdyn",
       "http3",
-      "hpack",
       "hpack-http3"
     ]
   },
