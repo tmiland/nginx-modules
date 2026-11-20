@@ -358,6 +358,17 @@ done
   done
 } > "$DEST_ROOT/modules.conf"
 
+{
+  printf '# bundle|comma-separated module ids\n'
+  for bundle_file in "$ROOT_DIR"/bundles/*.bundle; do
+    bundle_id=$(conf_get "$bundle_file" id || true)
+    bundle_modules=$(conf_get "$bundle_file" modules || true)
+    [[ -n $bundle_id && -n $bundle_modules ]] || continue
+    [[ $bundle_id == legacy ]] && continue
+    printf '%s|%s\n' "$bundle_id" "$bundle_modules"
+  done
+} > "$DEST_ROOT/bundles.conf"
+
 ARCHIVE=$OUT_DIR/nginx-modules-$BUNDLE.tar.gz
 TMP_ARCHIVE=$WORK/nginx-modules-$BUNDLE.tar.gz
 tar --sort=name --mtime='@0' --owner=0 --group=0 --numeric-owner \

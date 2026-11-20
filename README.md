@@ -22,6 +22,7 @@ The archive root contains:
 modules/       module sources at their final directory names
 versions.conf  version variables consumed by nginx_installer.sh
 modules.conf   one module per line: id|dir|kind|build|requires|env
+bundles.conf   use-case bundles: bundle|comma-separated module ids
 ```
 
 The installer parses `versions.conf`; do not source an untrusted copy. It contains the version variables for the modules in that archive; `legacy` and `candidate` entries are only present in bundles that include them. In `modules.conf`, `{dir}` is a placeholder for `modules/<dir>`:

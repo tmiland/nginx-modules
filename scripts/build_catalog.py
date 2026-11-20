@@ -368,6 +368,7 @@ def write_catalog(modules: dict[str, dict[str, object]],
         "modules/       module sources at their final directory names",
         "versions.conf  version variables consumed by nginx_installer.sh",
         "modules.conf   one module per line: id|dir|kind|build|requires|env",
+        "bundles.conf   use-case bundles: bundle|comma-separated module ids",
         "```",
         "",
         "The installer parses `versions.conf`; do not source an untrusted copy. "
