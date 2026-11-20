@@ -50,7 +50,7 @@ jobs:
           source scripts/lib.sh
           hm_ver=$(conf_get modules/headers-more.mod version)
           test -f dist/nginx-modules-full.tar.gz
-          tar -tzf dist/nginx-modules-full.tar.gz \
-            | grep -q "^nginx-modules-full/modules/headers-more-nginx-module-${hm_ver}/"
-          tar -xOf dist/nginx-modules-full.tar.gz nginx-modules-full/versions.conf \
-            | grep -qx "HEADERMOD_VER=${hm_ver}"
+          tar -tzf dist/nginx-modules-full.tar.gz > "$RUNNER_TEMP/bundle-files.txt"
+          grep -q "^nginx-modules-full/modules/headers-more-nginx-module-${hm_ver}/" "$RUNNER_TEMP/bundle-files.txt"
+          tar -xOf dist/nginx-modules-full.tar.gz nginx-modules-full/versions.conf > "$RUNNER_TEMP/bundle-versions.txt"
+          grep -qx "HEADERMOD_VER=${hm_ver}" "$RUNNER_TEMP/bundle-versions.txt"
