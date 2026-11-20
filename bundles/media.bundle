@@ -1,0 +1,4 @@
+id = 'media'
+name = 'Media'
+description = 'nginx-rtmp-module for RTMP streaming.'
+modules = 'rtmp'

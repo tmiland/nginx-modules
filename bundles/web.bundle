@@ -1,0 +1,4 @@
+id = 'web'
+name = 'Web'
+description = 'Core modules plus Redis, cache, echo, and statistics helpers.'
+modules = 'brotli, headers-more, fancyindex, cachepurge, subfilter, echo, set-misc, srcache, redis2, httpredis, vts'

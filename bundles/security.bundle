@@ -1,0 +1,4 @@
+id = 'security'
+name = 'Security'
+description = 'ModSecurity v3 with its nginx connector and the testcookie challenge module.'
+modules = 'modsecurity, modsecurity-nginx, testcookie'

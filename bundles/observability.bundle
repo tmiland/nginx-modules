@@ -1,0 +1,4 @@
+id = 'observability'
+name = 'Observability'
+description = 'nginx-module-vts for virtual-host traffic statistics.'
+modules = 'vts'

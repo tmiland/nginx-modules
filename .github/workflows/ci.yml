@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  catalog-and-smoke-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Regenerate catalog
+        run: python3 scripts/build_catalog.py
+
+      - name: Check generated files are current
+        run: git diff --exit-code
+
+      - name: Install shellcheck
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq shellcheck
+
+      - name: Syntax check
+        run: |
+          for script in scripts/*.sh; do
+            bash -n "$script"
+          done
+
+      - name: Shellcheck
+        run: shellcheck scripts/*.sh
+
+      - name: Build one module
+        run: bash scripts/build_bundle.sh --only headers-more
+
+      - name: Inspect bundle
+        run: |
+          test -f dist/nginx-modules-full.tar.gz
+          tar -tzf dist/nginx-modules-full.tar.gz \
+            | grep -q '^nginx-modules-full/modules/headers-more-nginx-module-0.39/'
+          tar -xOf dist/nginx-modules-full.tar.gz nginx-modules-full/versions.conf \
+            | grep -qx 'HEADERMOD_VER=0.39'

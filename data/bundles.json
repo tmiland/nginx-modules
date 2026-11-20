@@ -1,0 +1,212 @@
+[
+  {
+    "id": "core",
+    "name": "Core",
+    "description": "Common HTTP performance and content-filtering modules.",
+    "modules": [
+      "brotli",
+      "headers-more",
+      "fancyindex",
+      "cachepurge",
+      "subfilter"
+    ],
+    "resolved": [
+      "brotli",
+      "headers-more",
+      "fancyindex",
+      "cachepurge",
+      "subfilter"
+    ]
+  },
+  {
+    "id": "http3",
+    "name": "HTTP/3",
+    "description": "quiche with the TLS dynamic-record, HTTP/3, and HPACK patches.",
+    "modules": [
+      "quiche",
+      "tlsdyn",
+      "http3",
+      "hpack",
+      "hpack-http3"
+    ],
+    "resolved": [
+      "quiche",
+      "tlsdyn",
+      "http3",
+      "hpack",
+      "hpack-http3"
+    ]
+  },
+  {
+    "id": "legacy",
+    "name": "Legacy",
+    "description": "Unmaintained PageSpeed module sources. The PSOL binary is not bundled.",
+    "modules": [
+      "pagespeed"
+    ],
+    "resolved": [
+      "pagespeed"
+    ]
+  },
+  {
+    "id": "lua",
+    "name": "Lua",
+    "description": "LuaJIT, ngx_devel_kit, lua-nginx-module, the OpenResty Lua libraries, and set-misc.",
+    "modules": [
+      "luajit2",
+      "ngx-devel-kit",
+      "lua-nginx",
+      "lua-resty-core",
+      "lua-resty-lrucache",
+      "set-misc"
+    ],
+    "resolved": [
+      "luajit2",
+      "ngx-devel-kit",
+      "lua-nginx",
+      "lua-resty-core",
+      "lua-resty-lrucache",
+      "set-misc"
+    ]
+  },
+  {
+    "id": "media",
+    "name": "Media",
+    "description": "nginx-rtmp-module for RTMP streaming.",
+    "modules": [
+      "rtmp"
+    ],
+    "resolved": [
+      "rtmp"
+    ]
+  },
+  {
+    "id": "observability",
+    "name": "Observability",
+    "description": "nginx-module-vts for virtual-host traffic statistics.",
+    "modules": [
+      "vts"
+    ],
+    "resolved": [
+      "vts"
+    ]
+  },
+  {
+    "id": "security",
+    "name": "Security",
+    "description": "ModSecurity v3 with its nginx connector and the testcookie challenge module.",
+    "modules": [
+      "modsecurity",
+      "modsecurity-nginx",
+      "testcookie"
+    ],
+    "resolved": [
+      "modsecurity",
+      "modsecurity-nginx",
+      "testcookie"
+    ]
+  },
+  {
+    "id": "web",
+    "name": "Web",
+    "description": "Core modules plus Redis, cache, echo, and statistics helpers.",
+    "modules": [
+      "brotli",
+      "headers-more",
+      "fancyindex",
+      "cachepurge",
+      "subfilter",
+      "echo",
+      "set-misc",
+      "srcache",
+      "redis2",
+      "httpredis",
+      "vts"
+    ],
+    "resolved": [
+      "brotli",
+      "headers-more",
+      "fancyindex",
+      "cachepurge",
+      "subfilter",
+      "echo",
+      "ngx-devel-kit",
+      "set-misc",
+      "srcache",
+      "redis2",
+      "httpredis",
+      "vts"
+    ]
+  },
+  {
+    "id": "full",
+    "name": "Full",
+    "description": "All active modules plus their required dependencies.",
+    "modules": [
+      "brotli",
+      "cachepurge",
+      "echo",
+      "fancyindex",
+      "geoip2",
+      "headers-more",
+      "hpack",
+      "hpack-http3",
+      "http3",
+      "httpredis",
+      "libmaxminddb",
+      "libressl",
+      "lua-nginx",
+      "lua-resty-core",
+      "lua-resty-lrucache",
+      "luajit2",
+      "modsecurity",
+      "modsecurity-nginx",
+      "ngx-devel-kit",
+      "openssl",
+      "quiche",
+      "redis2",
+      "rtmp",
+      "set-misc",
+      "srcache",
+      "subfilter",
+      "testcookie",
+      "tlsdyn",
+      "vts",
+      "webdav",
+      "zstd"
+    ],
+    "resolved": [
+      "brotli",
+      "cachepurge",
+      "echo",
+      "fancyindex",
+      "libmaxminddb",
+      "geoip2",
+      "headers-more",
+      "hpack",
+      "hpack-http3",
+      "http3",
+      "httpredis",
+      "libressl",
+      "luajit2",
+      "ngx-devel-kit",
+      "lua-nginx",
+      "lua-resty-core",
+      "lua-resty-lrucache",
+      "modsecurity",
+      "modsecurity-nginx",
+      "openssl",
+      "quiche",
+      "redis2",
+      "rtmp",
+      "set-misc",
+      "srcache",
+      "subfilter",
+      "testcookie",
+      "tlsdyn",
+      "vts",
+      "webdav",
+      "zstd"
+    ]
+  }
+]

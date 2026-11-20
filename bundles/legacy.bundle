@@ -1,0 +1,4 @@
+id = 'legacy'
+name = 'Legacy'
+description = 'Unmaintained PageSpeed module sources. The PSOL binary is not bundled.'
+modules = 'pagespeed'

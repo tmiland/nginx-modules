@@ -1,0 +1,4 @@
+id = 'core'
+name = 'Core'
+description = 'Common HTTP performance and content-filtering modules.'
+modules = 'brotli, headers-more, fancyindex, cachepurge, subfilter'

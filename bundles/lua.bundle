@@ -1,0 +1,4 @@
+id = 'lua'
+name = 'Lua'
+description = 'LuaJIT, ngx_devel_kit, lua-nginx-module, the OpenResty Lua libraries, and set-misc.'
+modules = 'luajit2, ngx-devel-kit, lua-nginx, lua-resty-core, lua-resty-lrucache, set-misc'
